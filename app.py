@@ -318,7 +318,11 @@ anime_data = [
 keiba_data = [
     {
         "name": "オグリキャップ",
-        "race": ["有馬記念"],
+        "race": ["有馬記念（1990年）: ラストラン。奇跡の復活勝利で国民的名馬に",
+                 "天皇賞（秋）（1988年）: 地方出身馬として初の天皇賞制覇",
+                 "安田記念（1989年・1990年）:マイル王としての強さを証明（連覇）",
+                 "マイルチャンピオンシップ（1989年）マイルGⅠ制覇",
+                "ジャパンカップ（1989年）世界レベルでも通用する実力を示した"],
         "syasin": "オグリキャップ写真.jpg"
     }
 ]
@@ -363,4 +367,4 @@ if main_page == "競馬":
     for uma in keiba_data:
         st.subheader(uma["name"])
         st.image(uma["syasin"], width=350)
-        st.write("主なレース：" + " / ".join(uma["race"]))
+        st.markdown("**主なレース：**  \n" + "  \n".join(uma["race"]))
