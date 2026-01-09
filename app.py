@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("ジャンル別アニメ・漫画＆競馬紹介アプリ")
+st.title("ジャンル別アニメ・漫画＆競争馬紹介アプリ")
 st.write("左のサイドバーから好きなジャンルを選んでください")
 
 # ===== データ定義 =====
@@ -336,7 +336,7 @@ anime_data = [
     }
 ]
 
-keiba_data = [
+kyousouba_data = [
     {
         "name": "オグリキャップ",
         "race": ["有馬記念（1990年）: 優勝 - ラストラン。奇跡の復活勝利で国民的名馬に",
@@ -585,7 +585,7 @@ genres = [
     "心理戦"
 ]
 
-main_page = st.sidebar.selectbox("メインジャンル",["","アニメ・漫画", "競馬"])
+main_page = st.sidebar.selectbox("メインジャンル",["","アニメ・漫画", "競争馬"])
 
 if main_page == "アニメ・漫画":
 
@@ -605,10 +605,10 @@ if main_page == "アニメ・漫画":
                 st.caption(anime["source"])
         
            
-if main_page == "競馬":
+if main_page == "競争馬":
     
     # ===== アニメ・漫画の表示処理 =====
-    for uma in keiba_data:
+    for uma in kyousouba_data:
         st.subheader(uma["name"])
         st.image(uma["syasin"], width=350)
         st.markdown("**主なレース**  \n" + "  \n".join(uma["race"]))
