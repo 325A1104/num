@@ -3,7 +3,6 @@ import streamlit as st
 st.title("ジャンル別アニメ・漫画＆競争馬紹介アプリ")
 st.write("左のサイドバーから好きなジャンルを選んでください")
 
-# ===== データ定義 =====
 anime_data = [
     {
         "title": "ドラゴンボール",
@@ -642,7 +641,7 @@ if main_page == "アニメ・漫画":
 
     page = st.sidebar.selectbox("ジャンル選択", [""] + genres)
 
-    # ===== アニメ・漫画の表示処理 =====
+    # アニメ・漫画の表示処理
     if page:
         st.title("アニメ・漫画のところ")
         st.header(page)
@@ -656,9 +655,10 @@ if main_page == "アニメ・漫画":
                 st.caption(anime["source"])
         
            
+           
 if main_page == "競争馬":
     
-    # ===== アニメ・漫画の表示処理 =====
+    # アニメ・漫画の表示処理 
     for uma in kyousouba_data:
         st.subheader(uma["name"])
         st.image(uma["syasin"], width=350)
