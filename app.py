@@ -658,7 +658,7 @@ if main_page == "アニメ・漫画":
            
 if main_page == "競争馬":
     
-    # アニメ・漫画の表示処理 
+    # 競走馬の表示処理 
     for uma in kyousouba_data:
         st.subheader(uma["name"])
         st.image(uma["syasin"], width=350)
